@@ -1,15 +1,12 @@
-import express from 'express';
+import express from "express";
+import { signup, login, logout, getMe } from "../controllers/auth.controller.js";
+import { protectedRoute } from "../middleware/protectedRoute.js";
+
 const router = express.Router();
 
+router.get("/me",protectedRoute ,getMe);
+router.post("/login", login);
+router.post("/signup", signup);
+router.post("/logout", logout);
 
-router.post('/login', (req, res) => {
-    res.json({"success": true});
-});
-router.post('/signup', (req, res) => {
-    res.json({"success": true});
-});
-router.post('/logout', (req, res) => {
-    res.json({"success": true});
-});
-
-export default router
+export default router;
