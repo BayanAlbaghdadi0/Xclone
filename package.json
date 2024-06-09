@@ -129,8 +129,9 @@
     "whatwg-url": "^13.0.0"
   },
   "scripts": {
-  "dev":"nodemon  backend/server.js",
-  "start":"node  backend/server.js" },
+    "dev": "nodemon  backend/server.js",
+    "start": "node  backend/server.js"
+  },
   "keywords": [],
   "author": "",
   "type": "module",
