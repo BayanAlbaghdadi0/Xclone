@@ -2,6 +2,7 @@ import express from "express";
 
 import authRoutes from "./routes/auth.route.js";
 import userRoutes from "./routes/user.route.js";
+import postRoutes from "./routes/notification.route.js"
 
 import dotenv from "dotenv";
 import { v2 as cloudinary } from "cloudinary";
@@ -27,6 +28,8 @@ app.use(cookieParser());
 //
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/posts", postRoutes);
+app.use("/api/notifications")
 
 // app.get('/', (req, res) => {
 //   res.send('welcome in my  Express!');
