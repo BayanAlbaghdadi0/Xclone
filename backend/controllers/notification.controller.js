@@ -1,7 +1,7 @@
 import Notification from "../models/notification";
 
 export const getNotifications = async (req, res) => {
-  try {
+  try { 
     const userId = req.user._id;
     const notification = Notification.find({ to: userId }).populate({
       path: "from",
